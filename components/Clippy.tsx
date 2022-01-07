@@ -9,7 +9,7 @@ function Clippy({
 }: Props) {
 const [play] = useSound('/audio/windows.mp3');
   return (
-    <ParallaxLayer offset={9} speed={0.5} factor={1}>
+    <ParallaxLayer offset={8.5} speed={0.5} factor={1}>
       <div
         className="flex justify-center cursor-pointer"
         onClick={() => {
