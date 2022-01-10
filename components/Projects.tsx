@@ -56,8 +56,8 @@ function Project({
         className="opacity-50 transition-all duration-500 hover:opacity-100 cursor-pointer"
         alt={title}
         width={200}
-        quality={100}
         height={150}
+        priority={true}
         /* @ts-ignore */
         objectFit={objectFit ? objectFit : "cover"}
         src={src}

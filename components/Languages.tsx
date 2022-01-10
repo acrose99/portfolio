@@ -36,7 +36,7 @@ function Languages() {
           Languages I use
         </h1>
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
-        <div className="flex flex-row space-x-4 sm:space-x-12">
+        <div className="flex flex-row space-x-2 sm:space-x-12">
           <Language name="TypeScript" icon="cib:typescript" color="#007acc" />
           <Language name="JavaScript" icon="cib:javascript" color="#f1e05a" />
           <Language name="Python" icon="cib:python" color="#3572A5" />

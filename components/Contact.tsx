@@ -10,16 +10,19 @@ function Contact() {
         </h1>
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
         <article className="flex flex-col prose prose-2xl text-slate-800 w-full justify-start pl-4">
-            <p>
-                I am always open to new opportunities. Contact me if you think I may be a good fit for your team. 
-                <br />
-                <br />
-                Additionally, if you are interested in the digital humanities, I would <i> really </i>love to work with you on a project. Please reach out! 
-            </p>
+          <p>
+            I am always open to new opportunities. Contact me if you think I may
+            be a good fit for your team.
+            <br />
+            <br />
+            Additionally, if you are interested in the digital humanities, I
+            would <i> really </i>love to work with you on a project. Please
+            reach out!
+          </p>
           <li>
             <a
               href="mailto:acrosemail#gmail.com"
-              className="text-slate-800 hover:text-blue-500"
+              className="text-slate-800 hover:text-blue-500 transition-colors"
             >
               Shoot me an email.
             </a>
@@ -27,14 +30,11 @@ function Contact() {
           <li>
             <a
               href="https://github.com/acrose99"
-              className="text-slate-800 hover:text-blue-500"
+              className="text-slate-800 hover:text-blue-500 transition-colors"
             >
               Alternatively, check out my GitHub.
             </a>
           </li>
-          <p>
-              I don't have a LinkedIn, sorry!
-          </p>
         </article>
       </section>
     </ParallaxLayer>

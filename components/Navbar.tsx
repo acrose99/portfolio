@@ -22,31 +22,31 @@ function Navbar({ scrollTo }: NavBarProps) {
       {/* @ts-ignore */}
       <p
         onClick={() => scrollTo(1)}
-        className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
+        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
       >
         About
       </p>
       <p
         onClick={() => scrollTo(2)}
-        className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
+        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
       >
         Projects
       </p>
       <p
         onClick={() => scrollTo(5)}
-        className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
+        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
       >
         Languages
       </p>
       <p
         onClick={() => scrollTo(6)}
-        className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
+        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
       >
         Frameworks
       </p>
       <p
         onClick={() => scrollTo(7)} 
-        className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
+        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer pr-1"
       >
         Contact
       </p>

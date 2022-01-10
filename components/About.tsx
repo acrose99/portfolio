@@ -13,8 +13,8 @@ function About(props: Props) {
         <article className="flex flex-col prose prose-lg text-slate-800">
           <p>
             I’m a Senior at Loyola University Chicago studying Computer Science.
-            I’m graduating in August this year with a B.S with a minor in
-            history. I was also the Vice President of Loyola’s computer science
+            I’m graduating in August this year with a B.S with a Minor in
+            History. I was also the Vice President of Loyola’s computer science
             club for a while.
           </p>
           <p>
