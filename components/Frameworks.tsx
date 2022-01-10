@@ -28,17 +28,19 @@ function Framework({ name, icon, color }: LanguageProps) {
 
 function Frameworks() {
   return (
-    <ParallaxLayer offset={5} speed={0.1} factor={1}>
+    <ParallaxLayer offset={6} speed={0.1} factor={1}>
       <section className="flex flex-col items-center text-center sm:my-24 my-36 mx-4 justify-center space-y-12">
-        <h1 className="flex text-5xl sm:text-7xl text-slate-800">Frameworks I use</h1>
+        <h1 className="flex text-5xl sm:text-7xl text-slate-800">
+          Frameworks I use
+        </h1>
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
         <div className="flex flex-col space-y-12 mx-24">
-          <div className="flex flex-row space-x-12">
+          <div className="flex flex-row space-x-4 sm:space-x-12 ">
             <Framework name="React" icon="cib:react" color="#61dafb" />
             <Framework name="Next.JS" icon="cib:next-js" color="black" />
             <Framework name="Svelte" icon="cib:svelte" color="#FF3E00" />
           </div>
-          <div className="flex flex-row space-x-12">
+          <div className="flex flex-row space-x-4 sm:space-x-12">
             <Framework
               name="Expresss"
               icon="simple-icons:express"

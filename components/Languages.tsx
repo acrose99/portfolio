@@ -30,13 +30,13 @@ function Language({ name, icon, color }: LanguageProps) {
 
 function Languages() {
   return (
-    <ParallaxLayer offset={4} speed={0.1} factor={1}>
-      <section className="flex flex-col items-center text-center my-64 sm:my-24 mx-4 justify-center space-y-12">
+    <ParallaxLayer offset={5} speed={0.1} factor={1}>
+      <section className="flex flex-col items-center text-center my-96 sm:my-24 mx-4 justify-center space-y-12">
         <h1 className="flex text-5xl sm:text-7xl text-slate-800">
           Languages I use
         </h1>
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
-        <div className="flex flex-row space-x-12 mx-24">
+        <div className="flex flex-row space-x-4 sm:space-x-12">
           <Language name="TypeScript" icon="cib:typescript" color="#007acc" />
           <Language name="JavaScript" icon="cib:javascript" color="#f1e05a" />
           <Language name="Python" icon="cib:python" color="#3572A5" />

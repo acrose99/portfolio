@@ -33,19 +33,19 @@ function Navbar({ scrollTo }: NavBarProps) {
         Projects
       </p>
       <p
-        onClick={() => scrollTo(4)}
+        onClick={() => scrollTo(5)}
         className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
       >
         Languages
       </p>
       <p
-        onClick={() => scrollTo(5)}
+        onClick={() => scrollTo(6)}
         className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
       >
         Frameworks
       </p>
       <p
-        onClick={() => scrollTo(6.3)}
+        onClick={() => scrollTo(7)} 
         className="text-base sm:text-xl hover:text-indigo-500 cursor-pointer"
       >
         Contact

@@ -10,6 +10,7 @@ interface ProjectProps {
   languages: string[];
 }
 
+import {useRouter} from "next/router";
 import { useSpring, useTransition, config, animated } from "react-spring";
 import { useState } from "react";
 import StyledLink from "./StyledLink";
@@ -27,6 +28,7 @@ function Project({
   /* TODO: Chain react-spring transitions so that the 
   height of the container goes to 100vh, and after that,
   the image and text fade in. */
+  const router = useRouter()
 
   const transitions = useTransition(clicked, {
     from: { 
@@ -43,8 +45,12 @@ function Project({
   });
   return (
     <animated.div
-      className="flex flex-col m-0 space-y-0"
-      // onClick={() => setClicked(!clicked)}
+      className="flex flex-col m-0 space-y-0 cursor-pointer"
+      onClick={
+        () => {
+          router.push(href);
+        }
+      }
     >
       <Image
         className="opacity-50 transition-all duration-500 hover:opacity-100 cursor-pointer"
@@ -60,7 +66,7 @@ function Project({
         <StyledLink
           title={title}
           href={href}
-          className="justify-center text-2xl"
+          className="justify-center text-2xl mx-2"
         />
       </div>
     </animated.div>
@@ -98,8 +104,8 @@ function Project({
 
 function Projects() {
   return (
-    <ParallaxLayer offset={2} speed={-0.1} factor={1}>
-      <section className="flex flex-col items-center text-center sm:my-24 my-36 mx-4 justify-center space-y-12">
+    <ParallaxLayer offset={2} speed={-0.08} factor={1}>
+      <section className="flex flex-col items-center text-center my-96 sm:my-24 mx-4 justify-center space-y-12">
         <h1 className="flex text-5xl sm:text-7xl text-slate-800">Projects</h1>
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
         <div className="flex flex-col space-y-24">
@@ -147,6 +153,7 @@ function Projects() {
               description="A website for the history of computing"
               href="https://marketplace.visualstudio.com/items?itemName=aerokaido.three-js-snippets"
               src="/projects/threeJS.png"
+              objectFit="contain"
               languages={["TypeScript", "Javascript"]}
             />
             <Project

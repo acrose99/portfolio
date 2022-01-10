@@ -3,7 +3,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <ParallaxLayer offset={6} speed={0.1} factor={1}>
+    <ParallaxLayer offset={7} speed={0.1} factor={1}>
       <section className="flex flex-col items-center sm:my-24 my-36 mx-4 space-y-12">
         <h1 className="flex text-5xl sm:text-7xl text-slate-800">
           Contact Me!
@@ -11,7 +11,7 @@ function Contact() {
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
         <article className="flex flex-col prose prose-2xl text-slate-800 w-full justify-start pl-4">
             <p>
-                I am currently looking for a full-time position in Chicago. If you are interested, I would love to hear from you!
+                I am always open to new opportunities. Contact me if you think I may be a good fit for your team. 
                 <br />
                 <br />
                 Additionally, if you are interested in the digital humanities, I would <i> really </i>love to work with you on a project. Please reach out! 
