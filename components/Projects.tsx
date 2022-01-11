@@ -137,6 +137,7 @@ function Projects() {
               description="A website for the history of computing"
               href="https://history-of-computing.vercel.app/"
               src="/projects/historyOfComputing.png"
+              objectFit="contain"
               languages={["TypeScript", "React", "Next.js"]}
             />
             <Project
