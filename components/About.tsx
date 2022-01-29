@@ -12,7 +12,7 @@ function About(props: Props) {
         <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
         <article className="flex flex-col prose prose-lg text-slate-800">
           <p>
-            I’m a Senior at Loyola University Chicago studying Computer Science.
+            I went to Loyola University Chicago and studied Computer Science.
             I graduated early in December last year with a B.S with a Minor in
             History. I was also the Vice President of Loyola’s computer science
             club for a while.
