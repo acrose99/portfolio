@@ -13,9 +13,14 @@ function About(props: Props) {
         <article className="flex flex-col prose prose-lg text-slate-800">
           <p>
             I’m a Senior at Loyola University Chicago studying Computer Science.
-            I’m graduating in August this year with a B.S with a Minor in
+            I graduated early in December last year with a B.S with a Minor in
             History. I was also the Vice President of Loyola’s computer science
             club for a while.
+          </p>
+          <p>
+            Now, I'm an Associate Software Engineer at{" "}
+            <a href="https://cccis.com">CCCIS</a> doing ✨ <i>frontend</i> ✨
+            devolopment.
           </p>
           <p>
             My greatest passion is innovation within the digital humanities.
