@@ -1,43 +1,42 @@
-import { ParallaxLayer } from "@react-spring/parallax";
-import React from "react";
-
+import {Text, Link} from '@geist-ui/core'
 function Contact() {
   return (
-    <ParallaxLayer offset={7} speed={0.1} factor={1}>
-      <section className="flex flex-col items-center sm:my-24 my-36 mx-4 space-y-12">
-        <h1 className="flex text-5xl sm:text-7xl text-slate-800">
-          Contact Me!
-        </h1>
-        <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
-        <article className="flex flex-col prose prose-2xl text-slate-800 w-full justify-start pl-4">
-          <p>
-            I am always open to new opportunities. Contact me if you think I may
-            be a good fit for your team.
-            <br />
-            <br />
-            Additionally, if you are interested in the digital humanities, I
-            would <i> really </i>love to work with you on a project. Please
-            reach out!
-          </p>
-          <li>
-            <a
-              href="mailto:acrosemail#gmail.com"
-              className="text-slate-800 hover:text-blue-500 transition-colors"
-            >
-              Shoot me an email.
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/acrose99"
-              className="text-slate-800 hover:text-blue-500 transition-colors"
-            >
-              Alternatively, check out my GitHub.
-            </a>
-          </li>
-        </article>
-      </section>
-    </ParallaxLayer>
+    // <ParallaxLayer offset={7} speed={0.1} factor={1}>
+    <section className="flex flex-col items-center sm:my-2 mx-4 space-y-12">
+      <article className="w-10/12 text-lg">
+        <Text p>
+          I am always open to new opportunities. Contact me if you think I may
+          be a good fit for your team.
+          <br />
+          <br />
+          Additionally, if you are interested in the digital humanities, I would{" "}
+          <i> really </i>love to work with you on a project. Please reach out!
+        </Text>
+        <li>
+          <Link
+            icon
+            block
+            color
+            href="mailto:acrosemail#gmail.com"
+            // className="text-slate-800 hover:text-blue-500 transition-colors"
+          >
+            Shoot me an email.
+          </Link>
+        </li>
+        <li>
+          <Link
+            icon
+            block
+            color
+            href="https://github.com/acrose99"
+            // className="text-slate-800 hover:text-blue-500 transition-colors"
+          >
+            Alternatively, check out my GitHub.
+          </Link>
+        </li>
+      </article>
+    </section>
+    // </ParallaxLayer>
   );
 }
 

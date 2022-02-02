@@ -1,55 +1,30 @@
 import React from "react";
 import StyledLink from "./StyledLink";
 import Image from "next/image";
+import Rose from "./Navbar/Rose";
+import { Github } from "@geist-ui/icons";
+import { Link } from "@geist-ui/core";
 interface NavBarProps {
-  scrollTo: (index: number) => void;
+  scrollTo?: (index: number) => void;
+  switchThemes: () => void;
 }
-function Navbar({ scrollTo }: NavBarProps) {
+function Navbar({ scrollTo, switchThemes }: NavBarProps) {
   return (
     <nav
-      className="absolute z-50 space-x-2 sm:space-x-6 md:space-x-12 lg:space-x-24 flex justify-start items-center bg-white transition ease-in-out duration-[2000] border-slate-500 border-b-2 "
-      style={{
-        height: "5rem",
-        width: "100%",
-        // @ts-ignore
-      }}
+      className="flex items-center py-6"
+      style={
+        {
+          // @ts-ignore
+        }
+      }
     >
-      <div className="ml-2 sm:ml-12 cursor-pointer hover:hue-rotate-180 hover:scale-110 transition-all duration-1000"
-        onClick={() => scrollTo(0)}
-      >
-        <Image src="/logo.svg" alt="Homepage" width={50} height={50} />
-      </div>
-      {/* @ts-ignore */}
-      <p
-        onClick={() => scrollTo(1)}
-        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
-      >
-        About
-      </p>
-      <p
-        onClick={() => scrollTo(2)}
-        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
-      >
-        Projects
-      </p>
-      <p
-        onClick={() => scrollTo(5)}
-        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
-      >
-        Languages
-      </p>
-      <p
-        onClick={() => scrollTo(6)}
-        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer"
-      >
-        Frameworks
-      </p>
-      <p
-        onClick={() => scrollTo(7)} 
-        className="text-sm sm:text-base hover:text-indigo-500 cursor-pointer pr-1"
-      >
-        Contact
-      </p>
+      <Rose switchThemes={switchThemes} />
+      <Link href="https://github.com/acrose99">
+        <Github
+          size={50}
+          className="hover:scale-125 transition-all duration-1000 cursor-pointer"
+        />
+      </Link>
     </nav>
   );
 }

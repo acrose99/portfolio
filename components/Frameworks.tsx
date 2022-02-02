@@ -1,6 +1,4 @@
-import { ParallaxLayer } from "@react-spring/parallax";
-import { Icon } from "@iconify/react";
-import { useState } from "react";
+import { Collapse, Text } from "@geist-ui/core";
 
 interface LanguageProps {
   name: string;
@@ -8,54 +6,71 @@ interface LanguageProps {
   color: string;
 }
 
-function Framework({ name, icon, color }: LanguageProps) {
-  const [hovered, setHovered] = useState(false);
-  return (
-    <div title={name}>
-      <Icon
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        icon={icon}
-        className="h-24 w-24 sm:w-32 sm:h-32 md:h-48 md:w-48 text-slate-500 transition-all duration-500 hover:text-slate-700"
-        style={{
-          //@ts-ignore
-          color: hovered ? color : null,
-        }}
-      />
-    </div>
-  );
-}
-
 function Frameworks() {
   return (
-    <ParallaxLayer offset={6} speed={0.1} factor={1}>
-      <section className="flex flex-col items-center text-center sm:my-24 my-36 mx-4 justify-center space-y-12">
-        <h1 className="flex text-5xl sm:text-7xl text-slate-800">
-          Frameworks I use
-        </h1>
-        <div className="flex h-16 w-4/6 border-t-4 border-slate-500"></div>
-        <div className="flex flex-col space-y-12 mx-24">
-          <div className="flex flex-row space-x-4 sm:space-x-12 ">
-            <Framework name="React" icon="cib:react" color="#61dafb" />
-            <Framework name="Next.JS" icon="cib:next-js" color="black" />
-            <Framework name="Svelte" icon="cib:svelte" color="#FF3E00" />
-          </div>
-          <div className="flex flex-row space-x-4 sm:space-x-12">
-            <Framework
-              name="Expresss"
-              icon="simple-icons:express"
-              color="black"
-            />
-            <Framework
-              name="Tailwind"
-              icon="bx:bxl-tailwind-css"
-              color="#44A8B3"
-            />
-            <Framework name="Figma" icon="bx:bxl-figma" color="red" />
-          </div>
-        </div>
-      </section>
-    </ParallaxLayer>
+    <section className="flex flex-col items-center pb-12">
+      <div className="w-10/12">
+        <Collapse.Group className="space-y-12">
+          <Collapse title="React" shadow subtitle="Experience: 3 years">
+            <Text>
+              Unlike a lot of other people, I actually learned React before I
+              really got into Javascript and HTML/CSS to learn how to make
+              websites. I'm not sure if this was the correct choice or not, but
+              I do know I really love React and it's a fantastic framework!
+              <br />
+              <br />
+              I've used it for most of my projects, and I would say I'm
+              somewhere in between an intermediate and advanced developer. I'm
+              very comfortable with most of the core concepts of React, but
+              theres still some things I need to learn like Suspense, Redux, and
+              Performance Optimization. This is a side effect of React's
+              maturity in comparison to other frameworks more then anything.
+              <i> There is a lot to learn.</i>
+            </Text>
+          </Collapse>
+          <Collapse title="Figma" shadow subtitle="Experience: 3 years">
+            <Text>
+              I was a early adopter of Figma and I've been using it for a while
+              now before they introduced features like Variants and Auto Layout.
+              Figma is a great tool for prototyping and I'm very happy with the
+              way it works. I use it for almost any site I make.
+            </Text>
+          </Collapse>
+          <Collapse title="Next.js" shadow subtitle="Experience: 2 years">
+            <Text>
+              Next.js is a framework that I've been using for a while now. I
+              think I understand most of its features now because my main two
+              projects at the moment are using it.
+            </Text>
+          </Collapse>
+          <Collapse title="Vue" shadow subtitle="Experience: 1 year">
+            <Text>
+              Vue3 and the Quasar framework are what I use on a daily basis at
+              my job. I'm still getting used to them at the moment.
+            </Text>
+          </Collapse>
+          <Collapse title="Svelte" shadow subtitle="Experience: 1 year">
+            <Text>
+              I was introduced to Svelte through my friend{" "}
+              <a href="https://www.henryfellerhoff.com/" target="_blank">
+                Henry Fellerhoff
+              </a>{" "}
+              and I've been using it intermediately ever since. I'm not an
+              expert or anything but I can make a decent looking site with
+              enough time to shake off some rust.
+            </Text>
+          </Collapse>
+          <Collapse title="Three.js" shadow subtitle="Experience: 1 year">
+            <Text>
+              Other then React, Three.JS is my favorite framework at the moment.
+              I've done a couple side projects about it which you can see on my
+              Github but I will be learning/working with it more frequently
+              soon.
+            </Text>
+          </Collapse>
+        </Collapse.Group>
+      </div>
+    </section>
   );
 }
 

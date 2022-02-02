@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body
-{
-    height: 100%;
+body {
+    transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
