@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Languages from "../components/Languages";
 import Frameworks from "../components/Frameworks";
 import Contact from "../components/Contact";
-import { Select, Text, useTheme } from "@geist-ui/core";
+import { Link, Select, Text, useTheme } from "@geist-ui/core";
 import Resume from "../components/Resume";
 import NavigationInput from "../components/NavigationInput";
 import Project from "../components/Projects/Project";
@@ -175,9 +175,12 @@ export default function Home() {
         <title>Alex Rose: {page} </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Text className="text-center" h1>
-        Alex Rose.
-      </Text>
+      <div className="text-center">
+        <Text h1>Alex Rose.</Text>
+        <Text small i>
+          <Link color block href="https://www.mypronouns.org/they-them">(they/them)</Link>
+        </Text>
+      </div>
       <NavigationInput setPage={(page) => handleInputChange(page)} />
       <div className="flex w-full justify-center">
         <div
