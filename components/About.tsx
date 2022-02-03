@@ -32,7 +32,7 @@ function About() {
           helps me feel productive. Thus, I have a few side projects you can
           check out.
         </Text>
-        <Text p>Otherwise, I like running and house music.</Text>
+        <Text p>Finally, I like running and house music.</Text>
       </article>
       <Image
         priority

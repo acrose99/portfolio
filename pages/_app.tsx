@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Script from "next/script";
 function MyApp({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = useState(false);
   const [themeType, setThemeType] = useState("light");
@@ -29,6 +30,19 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar switchThemes={switchThemes} />
       <Component switchThemes={switchThemes} {...pageProps} />
       <Footer />
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-04KLC3DPQS"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-04KLC3DPQS');
+        `}
+      </Script>
     </GeistProvider>
   );
 }
