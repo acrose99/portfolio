@@ -9,12 +9,23 @@ import { Link, Select, Text, useTheme } from "@geist-ui/core";
 import Resume from "../components/Resume";
 import NavigationInput from "../components/NavigationInput";
 import Project from "../components/Projects/Project";
+import Music from "../components/Music";
+import { getSongs } from "./api/getSongs";
+
+type song = {
+  artist: string;
+  url: string;
+  file: string;
+  content?: string;
+};
+
 interface ContentProps {
   page: string;
   setPage: (page: string) => void;
+  songs: song[];
 }
 
-function Content({ page, setPage }: ContentProps): JSX.Element {
+function Content({ page, setPage, songs }: ContentProps): JSX.Element {
   const theme = useTheme();
 
   if (page === "Bio") {
@@ -133,24 +144,29 @@ function Content({ page, setPage }: ContentProps): JSX.Element {
         tags={["React", "Javascript", "Three.js", "VScode"]}
       />
     );
-  } 
-  else if (page === "Languages") {
+  } else if (page === "Languages") {
     return <Languages />;
-  }
-  else if (page === "Frameworks") {
+  } else if (page === "Frameworks") {
     return <Frameworks />;
-  }
-  else return <>{page}</>;
+  } else if (page === "Music") {
+    return <Music songs={songs} />;
+  } else return <>{page}</>;
 }
-
-export default function Home() {
+interface HomeProps {
+  songs: song[];
+}
+export default function Home({ songs }: HomeProps) {
   const [page, setPage] = useState("Bio");
   const [animationActive, setAnimationActive] = useState(false);
   const theme = useTheme();
   const contentAppear = useSpring({
     opacity: animationActive ? 1 : 0,
     display: animationActive ? "block" : "none",
-    transform: animationActive ? "translateX(0)" : Math.random() > 0.5 ? "translateX(10px)" : "translateX(-10px)",
+    transform: animationActive
+      ? "translateX(0)"
+      : Math.random() > 0.5
+      ? "translateX(10px)"
+      : "translateX(-10px)",
     config: {
       duration: 500,
       ...config.gentle,
@@ -178,7 +194,9 @@ export default function Home() {
       <div className="text-center">
         <Text h1>Alex Rose.</Text>
         <Text small i>
-          <Link color block href="https://www.mypronouns.org/they-them">(they/them)</Link>
+          <Link color block href="https://www.mypronouns.org/they-them">
+            (they/them)
+          </Link>
         </Text>
       </div>
       <NavigationInput setPage={(page) => handleInputChange(page)} />
@@ -189,8 +207,16 @@ export default function Home() {
         ></div>
       </div>
       <animated.div style={contentAppear}>
-        <Content setPage={setPage} page={page} />
+        <Content songs={songs} setPage={setPage} page={page} />
       </animated.div>
     </div>
   );
+}
+export async function getStaticProps() {
+  let songs = getSongs(["artist", "url"]);
+  return {
+    props: {
+      songs: songs,
+    },
+  };
 }
