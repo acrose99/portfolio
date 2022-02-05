@@ -1,5 +1,5 @@
 import { Card, Divider, useTheme, Text, Link } from "@geist-ui/core";
-import { useEffect, useState } from "React";
+import { useEffect, useState } from "react";
 import { getSongs } from "../pages/api/getSongs";
 
 type song = {
@@ -46,7 +46,7 @@ function Music({ songs }: MusicProps) {
   return (
     <section className="flex flex-col items-center sm:my-2 mx-12 space-y-12">
       <Text h1>50 Songs that I grew up on:</Text>
-      <div className="my-12 w-6/12 space-y-12">
+      <div className="my-12 sm:w-6/12 space-y-12">
         {songs.map((song, index) => 
           <Song file={song.file} key={index} artist={song.artist} url={song.url} />
         )}
