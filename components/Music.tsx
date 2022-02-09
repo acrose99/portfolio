@@ -1,6 +1,6 @@
 import { Card, Divider, useTheme, Text, Link } from "@geist-ui/core";
 import { useEffect, useState } from "react";
-import { getSongs } from "../pages/api/getSongs";
+import { getSongs } from "../pages/utils/getSongs";
 
 type song = {
   artist: string;
