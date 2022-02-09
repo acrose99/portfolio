@@ -10,7 +10,7 @@ import Resume from "../components/Resume";
 import NavigationInput from "../components/NavigationInput";
 import Project from "../components/Projects/Project";
 import Music from "../components/Music";
-import { getSongs } from "./utils/getSongs";
+import { getSongs } from "./api/getSongs";
 
 type song = {
   artist: string;
