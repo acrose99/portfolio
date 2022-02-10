@@ -188,7 +188,10 @@ export default function Home({ songs }: HomeProps) {
         <meta name="author" content="Alex Rose" />
         <meta name="designer" content="Alex Rose" />
         <meta name="publisher" content="Alex Rose" />
-
+        <meta
+          name="google-site-verification"
+          content="VdvpZmr1DbaSdgpZajFCWx4patEfFHA6o1gH42zSFv0"
+        />
         {/* Search Engine Optimization Meta Tags */}
         <title>Alex Rose</title>
         <meta
@@ -206,8 +209,11 @@ export default function Home({ songs }: HomeProps) {
         documentation: https://developers.facebook.com/docs/sharing/opengraph */}
         <meta name="og:type" content="site" />
         <meta name="og:url" content="https://www.alexrose.xyz/" />
-        <meta name="og:site_name" content='Alex Rose' />
-        <meta name="og:description" content="Alex Rose is a Software Developer located in Chicago" />
+        <meta name="og:site_name" content="Alex Rose" />
+        <meta
+          name="og:description"
+          content="Alex Rose is a Software Developer located in Chicago"
+        />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <link
           rel="apple-touch-icon"
