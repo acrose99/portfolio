@@ -46,7 +46,7 @@ function NavigationInput({
           <Select.Option value="History of Computing">
             History of Computing
           </Select.Option>
-          <Select.Option value="Don't Panic">Don't Panic!</Select.Option>
+          <Select.Option value="Don't Panic">Don&apos;t Panic!</Select.Option>
           <Select.Option value="Three.js Snippets">
             Three.js Snippets
           </Select.Option>

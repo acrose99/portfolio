@@ -33,6 +33,7 @@ function Project({ children, src, title, imageWidth, imageHeight, href, tags }: 
                 height={imageHeight ? imageHeight : "350px"}
                 objectFit="cover"
                 quality={100}
+                alt={title}
                 src={src}
               />
             </div>

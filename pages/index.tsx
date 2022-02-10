@@ -43,26 +43,25 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
       <Project
         title="Black Panther Narratives"
         src="/projects/blackPantherNarratives.jpeg"
-        children={
-          <div
-            style={{
-              color: theme.palette.accents_8,
-            }}
-          >
-            <Text h4 b>
-              Digital exhibit with the Chicago History Museum to showcase and
-              educate people about the legacy of the Black Panthers. Website is
-              built using React/Next.JS, using Tailwind for styling, and Figma
-              for prototyping and wireframes.
-            </Text>
-            <br />
-            <Text h4 b>
-              To be released in 2022 or 2023.
-            </Text>
-          </div>
-        }
         tags={["React", "Next.js", "Tailwind", "Figma"]}
-      />
+      >
+        <div
+          style={{
+            color: theme.palette.accents_8,
+          }}
+        >
+          <Text h4 b>
+            Digital exhibit with the Chicago History Museum to showcase and
+            educate people about the legacy of the Black Panthers. Website is
+            built using React/Next.JS, using Tailwind for styling, and Figma for
+            prototyping and wireframes.
+          </Text>
+          <br />
+          <Text h4 b>
+            To be released in 2022 or 2023.
+          </Text>
+        </div>
+      </Project>
     );
   } else if (page === "History of Computing") {
     return (
@@ -70,79 +69,75 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
         title="History of Computing"
         src="/projects/hoc.png"
         imageWidth="700px"
-        children={
-          <div
-            style={{
-              color: theme.palette.accents_8,
-            }}
-          >
-            <Text h4 b>
-              Created a front-end website meant to visualize the History of
-              Computing in a unique way, by highlighting other historical fields
-              like the history of culture, ancient history, etc. The website was
-              built with Next.JS/React, hosted on Vercel, and designed partially
-              on Figma.
-            </Text>
-            <br />
-            <Text h4 b>
-              I managed a team of three students (in cooperation with the Loyola
-              Software Systems Laboratory) for a majority of the fellowship and
-              reported to a professor.
-            </Text>
-          </div>
-        }
         href="https://history-of-computing.vercel.app/"
         tags={["React", "Next.js", "Figma"]}
-      />
+      >
+        <div
+          style={{
+            color: theme.palette.accents_8,
+          }}
+        >
+          <Text h4 b>
+            Created a front-end website meant to visualize the History of
+            Computing in a unique way, by highlighting other historical fields
+            like the history of culture, ancient history, etc. The website was
+            built with Next.JS/React, hosted on Vercel, and designed partially
+            on Figma.
+          </Text>
+          <br />
+          <Text h4 b>
+            I managed a team of three students (in cooperation with the Loyola
+            Software Systems Laboratory) for a majority of the fellowship and
+            reported to a professor.
+          </Text>
+        </div>
+      </Project>
     );
   } else if (page === "Don't Panic") {
     return (
       <Project
         title="Don't Panic"
         src="/projects/dontPanic.png"
-        children={
-          <div
-            style={{
-              color: theme.palette.accents_8,
-            }}
-          >
-            <Text h4 b>
-              Organized events, was responsible for most communication and
-              co-created the main website for Loyola University Chicago’s main
-              Computer Science club on campus.
-            </Text>
-          </div>
-        }
         href="https://dont-panic-luc.github.io/"
         tags={["Svelte", "Sapper"]}
-      />
+      >
+        <div
+          style={{
+            color: theme.palette.accents_8,
+          }}
+        >
+          <Text h4 b>
+            Organized events, was responsible for most communication and
+            co-created the main website for Loyola University Chicago’s main
+            Computer Science club on campus.
+          </Text>
+        </div>
+      </Project>
     );
   } else if (page === "Three.js Snippets") {
     return (
       <Project
         title="Three.js Snippets"
         src="/projects/threeJS.png"
-        children={
-          <div
-            style={{
-              color: theme.palette.accents_8,
-            }}
-          >
-            <Text h4 b>
-              A collection of snippets of code for Three.JS, a javascript
-              library, for React and Javascript, in the form of a VScode
-              extension.
-              <br />
-              <br />
-              It has about ~3,600 downloads at the time of writing.
-            </Text>
-          </div>
-        }
         imageWidth="400px"
         imageHeight="400px"
         href="https://marketplace.visualstudio.com/items?itemName=aerokaido.three-js-snippets/"
         tags={["React", "Javascript", "Three.js", "VScode"]}
-      />
+      >
+        <div
+          style={{
+            color: theme.palette.accents_8,
+          }}
+        >
+          <Text h4 b>
+            A collection of snippets of code for Three.JS, a javascript library,
+            for React and Javascript, in the form of a VScode extension.
+            <br />
+            <br />
+            It has about ~3,600 downloads at the time of writing.
+          </Text>
+        </div>
+      </Project>
     );
   } else if (page === "Languages") {
     return <Languages />;
