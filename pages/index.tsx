@@ -197,8 +197,7 @@ export default function Home({ songs }: HomeProps) {
         />
         <meta
           name="keywords"
-          content="Black Panthers, Black Panthers Chicago, Black Panthers History, Chicago Black Panthers, Chicago History,
-          Fred Hampton, Chicago History Museum"
+          content="Alex Rose, Alex Rose Loyola, Alex Rose Developer, Alex Rose Chicago, Alex Digital Humanities"
         />
         <meta name="robots" content="index,follow" />
         <meta name="distribution" content="web" />
