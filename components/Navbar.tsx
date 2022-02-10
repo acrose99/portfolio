@@ -19,12 +19,6 @@ function Navbar({ scrollTo, switchThemes }: NavBarProps) {
       }
     >
       <Rose switchThemes={switchThemes} />
-      <Link href="https://github.com/acrose99">
-        <Github
-          size={50}
-          className="hover:scale-125 transition-all duration-1000 cursor-pointer"
-        />
-      </Link>
     </nav>
   );
 }

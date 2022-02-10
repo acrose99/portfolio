@@ -11,7 +11,7 @@ import NavigationInput from "../components/NavigationInput";
 import Project from "../components/Projects/Project";
 import Music from "../components/Music";
 import { getSongs } from "./api/getSongs";
-
+import useSound from "use-sound";
 type song = {
   artist: string;
   url: string;
@@ -27,7 +27,6 @@ interface ContentProps {
 
 function Content({ page, setPage, songs }: ContentProps): JSX.Element {
   const theme = useTheme();
-
   if (page === "Bio") {
     return <About />;
   } else if (page === "Contact") {
@@ -152,6 +151,8 @@ interface HomeProps {
 }
 export default function Home({ songs }: HomeProps) {
   const [page, setPage] = useState("Bio");
+  const [play] = useSound("/audio/bloop.wav");
+
   const [animationActive, setAnimationActive] = useState(false);
   const theme = useTheme();
   const contentAppear = useSpring({
@@ -177,6 +178,7 @@ export default function Home({ songs }: HomeProps) {
     }, 500);
     setTimeout(() => {
       setAnimationActive(true);
+      play();
     }, 750);
   }
   return (

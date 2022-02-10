@@ -6,11 +6,19 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Script from "next/script";
+import useSound from "use-sound";
 function MyApp({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = useState(false);
   const [themeType, setThemeType] = useState("light");
+  const [drop] = useSound("/audio/drop.mp3", { volume: 2 });
+  const [pick] = useSound("/audio/pickFlower.wav", { volume: 2 });
   const switchThemes = () => {
     setThemeType((last) => (last === "dark" ? "light" : "dark"));
+    if (themeType === "dark") {
+      drop();
+    } else if (themeType === "light") {
+      pick();
+    }
   };
   useEffect(() => {
     if (
