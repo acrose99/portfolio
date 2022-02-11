@@ -151,8 +151,9 @@ interface HomeProps {
 }
 export default function Home({ songs }: HomeProps) {
   const [page, setPage] = useState("Bio");
-  const [play] = useSound("/audio/bloop.wav");
-
+  const [play] = useSound(
+    "/audio/bloop.wav", { volume: 0.5 }
+  );
   const [animationActive, setAnimationActive] = useState(false);
   const theme = useTheme();
   const contentAppear = useSpring({

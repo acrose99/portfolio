@@ -34,11 +34,16 @@ function Footer() {
           Chicago
         </Text>
         <Text p className="">
-          <Link block color href="https://github.com/acrose99/portfolio">
+          <Link icon block color href="https://github.com/acrose99/portfolio">
             Source Code
           </Link>
         </Text>
       </div>
+      <Text p className="flex justify-center">
+        <Link block href="/geocities">
+          Bonus??
+        </Link>
+      </Text>
     </footer>
   );
 }
