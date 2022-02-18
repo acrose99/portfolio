@@ -15,7 +15,7 @@ function About() {
           club for a while.
         </Text>
         <Text p>
-          Now, I&apos;m an Associate Software Engineer at{" "}
+          Now, I&apos;m an Software Engineer at{" "}
           <a href="https://cccis.com">CCCIS</a> doing frontend development.
         </Text>
         <Text p>

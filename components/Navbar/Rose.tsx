@@ -11,9 +11,9 @@ function Rose({
     const theme = useTheme();
     return (
       <div
-        className="mx-12 cursor-pointer hover:scale-110 hover:rotate-[20deg] transition-all duration-1000"
+        className="mx-12 z-50 cursor-pointer hover:scale-110 hover:rotate-45 transition-all duration-[2000ms]"
         style={{
-            filter: theme.type === "dark" ? "grayscale(100%)" : "grayscale(0%)",
+            filter: theme.type === "dark" ? "grayscale(100%)" : "hue-rotate(90deg)",
         }}
         // onClick={() => scrollTo(0)}
         onClick={() => switchThemes()}
