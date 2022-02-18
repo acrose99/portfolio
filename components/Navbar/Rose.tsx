@@ -11,7 +11,7 @@ function Rose({
     const theme = useTheme();
     return (
       <div
-        className="mx-12 z-50 cursor-pointer hover:scale-110 hover:rotate-45 transition-all duration-[2000ms]"
+        className="fixed top-12 mx-12  cursor-pointer hover:scale-110 hover:rotate-45 transition-all duration-[2000ms]"
         style={{
             filter: theme.type === "dark" ? "grayscale(100%)" : "hue-rotate(90deg)",
         }}
