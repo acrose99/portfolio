@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Text } from "@geist-ui/react";
+import { Text } from "@geist-ui/core";
 import { animated, useSpring } from "react-spring";
 import { useEffect } from "react";
 type slide = { title: string; definition: string; src: string; index: number };
