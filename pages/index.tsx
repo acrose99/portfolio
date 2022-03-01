@@ -70,7 +70,8 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
       <Project
         title="History of Computing"
         src="/projects/hoc.png"
-        imageWidth="700px"
+        imageHeight="500px"
+        imageWidth="400px"
         href="https://history-of-computing.vercel.app/"
         tags={["React", "Next.js", "Figma"]}
       >
@@ -91,6 +92,11 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
             I managed a team of three students (in cooperation with the Loyola
             Software Systems Laboratory) for a majority of the fellowship and
             reported to a professor.
+          </Text>
+          <Text h5 i>
+            I&apos;ve been periodically working on this project since the
+            fellowship ended, myself, because I like having something to
+            incrementally development.
           </Text>
         </div>
       </Project>
@@ -136,7 +142,7 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
             for React and Javascript, in the form of a VScode extension.
             <br />
             <br />
-            It has about ~3,600 downloads at the time of writing.
+            It has about ~3,000 downloads at the time of writing.
           </Text>
         </div>
       </Project>
