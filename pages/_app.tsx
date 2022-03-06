@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           images: [
             {
               url: "http://alexrose.xyz/ogImage2.png",
-              secureUrl: "https://alexrose.xyz/ogImage.png",
+              secureUrl: "https://alexrose.xyz/ogImage2.png",
               width: 180,
               height: 110,
               alt: "Alex Rose",
@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             },
             {
               url: "http://alexrose.xyz/ogImage.png",
-              secureUrl: "https://alexrose.xyz/ogImage2.png",
+              secureUrl: "https://alexrose.xyz/ogImage.png",
               width: 1200,
               height: 630,
               alt: "Alex Rose",
