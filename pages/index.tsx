@@ -165,17 +165,12 @@ export default function Home({ songs }: HomeProps) {
   const contentAppear = useSpring({
     opacity: animationActive ? 1 : 0,
     // display: animationActive ? "block" : "none",
-    transform: animationActive
-      ? "translateY(0)"
-      : "translateY(20px)",
+    transform: animationActive ? "translateY(0)" : "translateY(20px)",
     config: {
       duration: 500,
       ...config.gentle,
     },
   });
-  useEffect(() => {
-    setAnimationActive(true);
-  }, []);
   function handleInputChange(value: string) {
     setAnimationActive(false);
     setTimeout(() => {
@@ -219,8 +214,7 @@ export default function Home({ songs }: HomeProps) {
       opacity: 1,
       transform: "translateX(0)",
     },
-    config: {
-    },
+    config: {},
   }));
   function changeSlide(index: number) {
     setSlide(slides[index]);
@@ -238,74 +232,146 @@ export default function Home({ songs }: HomeProps) {
     api.start();
   }
   return (
-    <div className="space-y-8 min-h-screen">
-      <div className="text-center">
-        <Text h1>Alex Rose.</Text>
-        <Text small i>
-          <Link color block href="https://www.mypronouns.org/they-them">
-            (they/them)
-          </Link>
-        </Text>
-        <svg
-          className="-z-1 overflow-visible h-full w-screen"
-          style={{
-            fill: theme.palette.magenta,
-          }}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M-72 864V1C1119.15 120.978 1794.79 290.567 2011.97 864C1632.11 665.44 464.383 781.267 -72 864Z" />
-        </svg>
-        <div className="flex justify-center space-x-4 cursor-pointer">
-          <Text
-            className="hover:text-blue-400 transition-colors duration-500"
-            h2
-            onClick={() => changeSlide(0)}
-            style={{
-              color: slideIndex === 0 ? theme.palette.cyan : undefined,
-            }}
-          >
-            1
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="language" content="english" />
+        <meta httpEquiv="content-type" content="text/html" />
+        <meta name="author" content="Alex Rose" />
+        <meta name="designer" content="Alex Rose" />
+        <meta name="publisher" content="Alex Rose" />
+        <meta
+          name="google-site-verification"
+          content="VdvpZmr1DbaSdgpZajFCWx4patEfFHA6o1gH42zSFv0"
+        />
+        {/* Search Engine Optimization Meta Tags */}
+        <title>Alex Rose</title>
+        <meta
+          name="description"
+          content="Alex Rose is a Software Developer located in Chicago"
+        />
+        <meta
+          name="keywords"
+          content="Alex Rose, Alex Rose Loyola, Alex Rose Developer, Alex Rose Chicago, Alex Digital Humanities"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="distribution" content="web" />
+        {/*
+Facebook Open Graph meta tags
+documentation: https://developers.facebook.com/docs/sharing/opengraph */}
+        <meta property="og:type" content="site" />
+        <meta property="og:url" content="https://www.alexrose.xyz/" />
+        <meta property="og:site_name" content="Alex Rose" />
+        <meta property="og:title" content="Alex Rose's Site" />
+        <meta
+          property="og:description"
+          content="Alex Rose is a Software Engineer located in Chicago"
+        />
+        <meta property="og:image" content="https://alexrose.xyz/ogImage.png" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="16x16"
+          href="/icons/favicon-16x16.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="32x32"
+          href="/icons/favicon-32x32.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/icons/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/manifest.json" />
+        <link
+          rel="mask-icon"
+          color="#000000"
+          href="/icons/safari-pinned-tab.svg"
+        />
+        <link rel="apple-touch-startup-image" href="/startup.png" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+
+        {/* Meta Tags for HTML pages on Mobile */}
+        {/* <meta name="format-detection" content="telephone=yes"/>
+<meta name="HandheldFriendly" content="true"/>  */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1"
+        />
+        <link rel="shortcut icon" href="/icons/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="space-y-8 min-h-screen">
+        <div className="text-center">
+          <Text h1>Alex Rose.</Text>
+          <Text small i>
+            <Link color block href="https://www.mypronouns.org/they-them">
+              (they/them)
+            </Link>
           </Text>
-          <Text
-            className="hover:text-blue-400 transition-colors duration-500"
-            h2
-            onClick={() => changeSlide(1)}
+          <svg
+            className="-z-1 overflow-visible h-full w-screen"
             style={{
-              color: slideIndex === 1 ? theme.palette.cyan : undefined,
+              fill: theme.palette.magenta,
             }}
+            xmlns="http://www.w3.org/2000/svg"
           >
-            2
-          </Text>
-          <Text
-            h2
-            className="hover:text-blue-400 transition-colors duration-500"
-            onClick={() => changeSlide(2)}
-            style={{
-              color: slideIndex === 2 ? theme.palette.cyan : undefined,
-            }}
-          >
-            3
-          </Text>
+            <path d="M-72 864V1C1119.15 120.978 1794.79 290.567 2011.97 864C1632.11 665.44 464.383 781.267 -72 864Z" />
+          </svg>
+          <div className="flex justify-center space-x-4 cursor-pointer">
+            <Text
+              className="hover:text-blue-400 transition-colors duration-500"
+              h2
+              onClick={() => changeSlide(0)}
+              style={{
+                color: slideIndex === 0 ? theme.palette.cyan : undefined,
+              }}
+            >
+              1
+            </Text>
+            <Text
+              className="hover:text-blue-400 transition-colors duration-500"
+              h2
+              onClick={() => changeSlide(1)}
+              style={{
+                color: slideIndex === 1 ? theme.palette.cyan : undefined,
+              }}
+            >
+              2
+            </Text>
+            <Text
+              h2
+              className="hover:text-blue-400 transition-colors duration-500"
+              onClick={() => changeSlide(2)}
+              style={{
+                color: slideIndex === 2 ? theme.palette.cyan : undefined,
+              }}
+            >
+              3
+            </Text>
+          </div>
+        </div>
+        <div>
+          <animated.div style={slideSpring}>
+            <Slide slide={slide} />
+          </animated.div>
+        </div>
+        <div className="pt-48 flex flex-col">
+          <NavigationInput setPage={(page) => handleInputChange(page)} />
+          <div className="flex w-full justify-center py-12">
+            <div
+              style={{ borderColor: theme.palette.accents_8 }}
+              className="items-center w-5/6 border-t-4"
+            ></div>
+          </div>
+          <animated.div style={contentAppear}>
+            <Content songs={songs} setPage={setPage} page={page} />
+          </animated.div>
         </div>
       </div>
-      <div>
-        <animated.div style={slideSpring}>
-          <Slide slide={slide} />
-        </animated.div>
-      </div>
-      <div className="pt-48 flex flex-col">
-        <NavigationInput setPage={(page) => handleInputChange(page)} />
-        <div className="flex w-full justify-center py-12">
-          <div
-            style={{ borderColor: theme.palette.accents_8 }}
-            className="items-center w-5/6 border-t-4"
-          ></div>
-        </div>
-        <animated.div style={contentAppear}>
-          <Content songs={songs} setPage={setPage} page={page} />
-        </animated.div>
-      </div>
-    </div>
+    </>
   );
 }
 export async function getStaticProps() {
