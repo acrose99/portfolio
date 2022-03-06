@@ -68,14 +68,16 @@ function MyApp({ Component, pageProps }: AppProps) {
           description: 'Alex Rose is a Software Developer located in Chicago',
           images: [
             {
-              url: 'https://alexrose.xyz/ogImage1.png',
+              url: 'http://alexrose.xyz/ogImage.png',
+              secureUrl: 'https://alexrose.xyz/ogImage.png',
               width: 180,
               height: 110,
               alt: 'Alex Rose',
               type: 'image/png',
             },
             {
-              url: 'https://alexrose.xyz/ogImage2.png',
+              url: 'http://alexrose.xyz/ogImage2.png',
+              secureUrl: 'https://alexrose.xyz/ogImage2.png',
               width: 1200,
               height: 630,
               alt: 'Alex Rose',
