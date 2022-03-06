@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   if (!mounted) return null;
   return (
-    <GeistProvider themeType={themeType}>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="language" content="english" />
@@ -58,18 +58,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta name="robots" content="index,follow" />
         <meta name="distribution" content="web" />
-        {/* 
-      Facebook Open Graph meta tags
-        documentation: https://developers.facebook.com/docs/sharing/opengraph */}
-        <meta name="og:type" content="site" />
-        <meta name="og:url" content="https://www.alexrose.xyz/" />
-        <meta name="og:site_name" content="Alex Rose" />
-        <meta name="og:title" content="Alex Rose's Site" />
+        {/*
+  Facebook Open Graph meta tags
+    documentation: https://developers.facebook.com/docs/sharing/opengraph */}
+        <meta property="og:type" content="site" />
+        <meta property="og:url" content="https://www.alexrose.xyz/" />
+        <meta property="og:site_name" content="Alex Rose" />
+        <meta property="og:title" content="Alex Rose's Site" />
         <meta
-          name="og:description"
+          property="og:description"
           content="Alex Rose is a Software Engineer located in Chicago"
         />
-        <meta name="og:image" content="https://alexrose.xyz/ogImage.png" />
+        <meta property="og:image" content="https://alexrose.xyz/ogImage.png" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
         <link
           rel="apple-touch-icon"
@@ -97,7 +97,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         {/* Meta Tags for HTML pages on Mobile */}
         {/* <meta name="format-detection" content="telephone=yes"/>
-        <meta name="HandheldFriendly" content="true"/>  */}
+    <meta name="HandheldFriendly" content="true"/>  */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -105,24 +105,26 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/icons/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CssBaseline />
-      <Navbar switchThemes={switchThemes} />
-      <Component switchThemes={switchThemes} {...pageProps} />
-      <Footer />
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-04KLC3DPQS"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+      <GeistProvider themeType={themeType}>
+        <CssBaseline />
+        <Navbar switchThemes={switchThemes} />
+        <Component switchThemes={switchThemes} {...pageProps} />
+        <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-04KLC3DPQS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-04KLC3DPQS');
         `}
-      </Script>
-    </GeistProvider>
+        </Script>
+      </GeistProvider>
+    </>
   );
 }
 export default MyApp;
