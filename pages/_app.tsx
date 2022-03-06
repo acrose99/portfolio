@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   if (!mounted) return null;
   return (
-    <GeistProvider themeType={themeType}>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="language" content="english" />
@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         {/* Meta Tags for HTML pages on Mobile */}
         {/* <meta name="format-detection" content="telephone=yes"/>
-        <meta name="HandheldFriendly" content="true"/>  */}
+    <meta name="HandheldFriendly" content="true"/>  */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1"
@@ -58,53 +58,55 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/icons/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <DefaultSeo 
+      <DefaultSeo
         title="Alex Rose"
         description="Alex Rose is a Software Developer located in Chicago"
         canonical="https://www.alexrose.xyz/"
         openGraph={{
-          url: 'https://www.alexrose.xyz/',
-          title: 'Alex Rose',
-          description: 'Alex Rose is a Software Developer located in Chicago',
+          url: "https://www.alexrose.xyz/",
+          title: "Alex Rose",
+          description: "Alex Rose is a Software Developer located in Chicago",
           images: [
             {
-              url: 'http://alexrose.xyz/ogImage.png',
-              secureUrl: 'https://alexrose.xyz/ogImage.png',
+              url: "http://alexrose.xyz/ogImage.png",
+              secureUrl: "https://alexrose.xyz/ogImage.png",
               width: 180,
               height: 110,
-              alt: 'Alex Rose',
-              type: 'image/png',
+              alt: "Alex Rose",
+              type: "image/png",
             },
             {
-              url: 'http://alexrose.xyz/ogImage2.png',
-              secureUrl: 'https://alexrose.xyz/ogImage2.png',
+              url: "http://alexrose.xyz/ogImage2.png",
+              secureUrl: "https://alexrose.xyz/ogImage2.png",
               width: 1200,
               height: 630,
-              alt: 'Alex Rose',
-              type: 'image/png',
+              alt: "Alex Rose",
+              type: "image/png",
             },
           ],
-          site_name: 'Alex Rose',
+          site_name: "Alex Rose",
         }}
       />
-      <CssBaseline />
-      <Navbar switchThemes={switchThemes} />
-      <Component switchThemes={switchThemes} {...pageProps} />
-      <Footer />
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-04KLC3DPQS"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+      <GeistProvider themeType={themeType}>
+        <CssBaseline />
+        <Navbar switchThemes={switchThemes} />
+        <Component switchThemes={switchThemes} {...pageProps} />
+        <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-04KLC3DPQS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-04KLC3DPQS');
         `}
-      </Script>
-    </GeistProvider>
+        </Script>
+      </GeistProvider>
+    </>
   );
 }
 export default MyApp;
