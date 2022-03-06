@@ -215,6 +215,9 @@ export default function Home({ songs }: HomeProps) {
     },
     config: {},
   }));
+  useEffect(() => {
+    setAnimationActive(true);
+  }, []);
   function changeSlide(index: number) {
     setSlide(slides[index]);
     setSlideIndex(index);
