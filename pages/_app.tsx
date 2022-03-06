@@ -11,7 +11,6 @@ import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [mounted, setMounted] = useState(false);
   const [themeType, setThemeType] = useState("light");
   const [drop] = useSound("/audio/drop.mp3", { volume: 2 });
   const [pick] = useSound("/audio/pickFlower.wav", { volume: 2 });
@@ -31,10 +30,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       setThemeType("dark");
     }
   }, []);
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
   return (
     <>
       <Head>
