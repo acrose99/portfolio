@@ -8,20 +8,8 @@ interface slideProps {
 }
 
 function Slide({ slide }: slideProps) {
-  let slideSpring = useSpring({
-    from: {
-      opacity: 0,
-    },
-    to: {
-      opacity: 1,
-    },
-    config: {
-      duration: 1000,
-    },
-  });
   return (
     <animated.div
-      style={slideSpring}
       className="flex flex-col items-center md:flex-row md:justify-evenly mx-12 space-y-2 md:space-x-12"
     >
       <div className="flex md:items-end" style={{}}>
