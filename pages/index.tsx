@@ -128,7 +128,7 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
         src="/projects/threeJS.png"
         imageWidth="400px"
         imageHeight="400px"
-        href="https://marketplace.visualstudio.com/items?itemName=aerokaido.three-js-snippets/"
+        href="https://marketplace.visualstudio.com/items?itemName=aerokaido.three-js-snippets"
         tags={["React", "Javascript", "Three.js", "VScode"]}
       >
         <div
@@ -138,10 +138,10 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
         >
           <Text h4 b>
             A collection of snippets of code for Three.JS, a javascript library,
-            for React and Javascript, in the form of a VScode extension.
+            for React and Javascript, in the form of a VScode extension. I know a snippet extension is not that impressive but compared to the alternatives, this is superior.
             <br />
             <br />
-            It has about ~3,000 downloads at the time of writing.
+            It has about ~3,800 downloads at the time of writing.
           </Text>
         </div>
       </Project>
@@ -171,13 +171,15 @@ export default function Home({ songs }: HomeProps) {
     },
   });
   function handleInputChange(value: string) {
-    setAnimationActive(false);
-    setTimeout(() => {
-      setPage(value);
-    }, 500);
-    setTimeout(() => {
-      setAnimationActive(true);
-    }, 750);
+    if (value != page) {
+      setAnimationActive(false);
+      setTimeout(() => {
+        setPage(value);
+      }, 500);
+      setTimeout(() => {
+        setAnimationActive(true);
+      }, 750);
+    }
   }
   let slides = [
     {
@@ -217,7 +219,7 @@ export default function Home({ songs }: HomeProps) {
   }));
   useEffect(() => {
     setAnimationActive(true);
-  }, []);
+  }, [page]);
   function changeSlide(index: number) {
     setSlide(slides[index]);
     setSlideIndex(index);

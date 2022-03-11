@@ -9,10 +9,8 @@ interface slideProps {
 
 function Slide({ slide }: slideProps) {
   return (
-    <animated.div
-      className="flex flex-col items-center md:flex-row md:justify-evenly mx-12 space-y-2 md:space-x-12"
-    >
-      <div className="flex md:items-end" style={{}}>
+    <animated.div className="flex flex-col items-center md:flex-row md:justify-evenly mx-4 space-y-2 md:space-x-12">
+      <div className="flex md:items-end aspect-[6/5] lg:aspect-[7/5]" style={{}}>
         <Image
           alt={slide.title}
           src={slide.src}
@@ -24,13 +22,11 @@ function Slide({ slide }: slideProps) {
         />
       </div>
       <div className="flex-col md:items-start">
-        <Text className=" md:text-6xl font-black whitespace-nowrap">
-          {slide.title}
-        </Text>
-        <Text className="text-3xl md:text-4xl font-bold italic ">
+        <Text className="text-2xl md:text-5xl font-black">{slide.title}</Text>
+        <Text className="text-xl md:text-4xl font-bold italic ">
           Definition:
         </Text>
-        <Text className="text-xl md:text-2xl font-light">
+        <Text className="text-lg md:text-2xl font-light">
           {slide.definition}
         </Text>
       </div>
