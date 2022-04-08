@@ -141,7 +141,7 @@ function Content({ page, setPage, songs }: ContentProps): JSX.Element {
             for React and Javascript, in the form of a VScode extension. I know a snippet extension is not that impressive but compared to the alternatives, this is superior.
             <br />
             <br />
-            It has about ~3,800 downloads at the time of writing.
+            It has about ~4,300 downloads at the time of writing.
           </Text>
         </div>
       </Project>
