@@ -77,7 +77,7 @@ function Hero() {
           <li>
             <Link
               className="underline hover:text-[#447271]"
-              href="https://history-of-computing.vercel.app/Timeline/all"
+              href="https://digital-humanities-concept-acrose99.vercel.app/"
               target="_blank"
             >
               Black Panther Party Digital Exhibit
@@ -86,10 +86,10 @@ function Hero() {
           <li>
             <Link
               className="underline hover:text-[#447271]"
-              href="https://history-of-computing.vercel.app/Timeline/all"
+              href="https://marketplace.visualstudio.com/items?itemName=aerokaido.three-js-snippets"
               target="_blank"
             >
-              ThreeJS Snippets (20,000 installs)
+              ThreeJS Snippets (36,000+ installs)
             </Link>
           </li>
           <li>More to come...</li>
