@@ -38,10 +38,6 @@ function Hero() {
             {" "}
             acrosemail@gmail.com{" "}
           </Link>
-          <br />
-          <br />
-          In real life I like giving history tours of Chicago, watching Planet
-          Earth with my partner, and touching grass.
         </p>
         <h3 className="text-lg text-[#465959] md:text-2xl">
           In my free time I made or helped make:
